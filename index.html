@@ -6,32 +6,14 @@
   <title>Shorts Crop Zoom Privacy Policy</title>
   <style>
     :root { color-scheme: light dark; }
-    body {
-      margin: 0;
-      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #172033;
-      background: #f7f9fc;
-    }
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 48px 24px 72px;
-      background: #fff;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #f7f9fc; }
+    main { max-width: 880px; margin: 0 auto; padding: 48px 24px 72px; background: #fff; min-height: 100vh; box-sizing: border-box; }
     h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.2; }
     h2 { margin-top: 34px; font-size: 22px; }
     p, li { color: #31405c; }
     code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
     .updated { color: #667085; margin-top: 0; }
-    @media (prefers-color-scheme: dark) {
-      body { color: #edf2fb; background: #0d1420; }
-      main { background: #111a28; }
-      p, li { color: #c7d1e0; }
-      code { background: #202c3d; }
-      .updated { color: #9aa7b8; }
-    }
+    @media (prefers-color-scheme: dark) { body { color: #edf2fb; background: #0d1420; } main { background: #111a28; } p, li { color: #c7d1e0; } code { background: #202c3d; } .updated { color: #9aa7b8; } }
   </style>
 </head>
 <body>
@@ -41,9 +23,13 @@
 
   <p>Shorts Crop Zoom is a Chrome extension that uses a bundled local AI model to detect and enlarge the horizontal content area inside YouTube Shorts.</p>
 
-  <h2>Data Collection</h2>
-  <p>Shorts Crop Zoom does not collect, store, sell, share, or transmit user data.</p>
-  <p>The extension does not collect any of the following categories of data:</p>
+  <h2>Summary</h2>
+  <p>Shorts Crop Zoom processes the currently visible YouTube Shorts video frame locally in the user's browser when the user activates the extension. This local processing is used only to detect the crop area and display the enlarged overlay.</p>
+  <p>The extension does not transmit, sell, share, or store user data on external servers.</p>
+
+  <h2>Data Handled</h2>
+  <p>The extension handles website content locally: specifically, the currently visible video frame from a YouTube Shorts page selected by the user. This is processed only in browser memory for the extension's single purpose.</p>
+  <p>The extension does not collect or transmit the following categories of data:</p>
   <ul>
     <li>Personally identifiable information</li>
     <li>Health information</li>
@@ -52,13 +38,12 @@
     <li>Personal communications</li>
     <li>Location information</li>
     <li>Web history</li>
-    <li>User activity</li>
-    <li>Website content</li>
+    <li>User activity logs</li>
   </ul>
 
   <h2>Local Processing</h2>
   <p>When the user activates the extension on a YouTube Shorts page, the extension reads the currently visible video frame in the browser, runs local AI inference using bundled extension files, and displays a live crop overlay.</p>
-  <p>Video frames are processed locally in the user's browser. They are not uploaded to any server.</p>
+  <p>Video frames are processed locally in the user's browser. They are not uploaded to any server and are not saved by the extension.</p>
 
   <h2>Network Requests</h2>
   <p>The extension does not send analytics, telemetry, usage logs, video frames, URLs, identifiers, or browsing data to remote servers.</p>
@@ -69,6 +54,7 @@
   <ul>
     <li><code>activeTab</code>: used when the user activates the extension for the current YouTube Shorts tab.</li>
     <li><code>scripting</code>: used to inject the bundled runtime and content script into an already-open Shorts tab when necessary.</li>
+    <li>YouTube Shorts page access: used to detect the visible video element and draw the local zoom overlay only on YouTube Shorts pages.</li>
   </ul>
 
   <h2>Third Parties</h2>
